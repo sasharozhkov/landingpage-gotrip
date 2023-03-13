@@ -1,0 +1,78 @@
+.cta {
+  padding: 100px 0;
+
+  @include _850 {
+    padding: 30px 0;
+  }
+
+  &__plate {
+    position: relative;
+    @include position;
+    justify-content: center;
+    background: $color-2;
+    border-radius: 60px;
+    max-height: 580px;
+    padding: 115px 15px;
+    color: $color-6;
+    text-align: center;
+
+    @include _850 {
+      border-radius: 30px;
+      padding: 30px 15px;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      width: 63px;
+      height: 83px;
+      content: "";
+      z-index: -1;
+    }
+
+    &::before {
+      left: 74px;
+      bottom: 56px;
+      background-image: url(img/cta-el-02.svg);
+    }
+
+    &::after {
+      top: 74px;
+      right: 80px;
+      background-image: url(img/cta-el-01.svg);
+    }
+  }
+
+  &__title {
+    font-size: 45px;
+    max-width: 654px;
+    font-weight: 500;
+
+    @include _850 {
+      font-size: 35px;
+    }
+  }
+
+  &__text {
+    margin-top: 30px;
+    font-weight: 400;
+    font-size: 30px;
+    opacity: 0.5;
+
+    @include _850 {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  }
+
+  &__btn {
+    @include btn;
+    margin-top: 60px;
+    padding: 25px 75px;
+    font-size: 20px;
+
+    @include _850 {
+      margin-top: 30px;
+    }
+  }
+}

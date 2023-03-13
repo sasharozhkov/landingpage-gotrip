@@ -1,0 +1,164 @@
+// Colors
+$color-1: #000000;
+$color-2: #ffffff;
+$color-3: #fefefe;
+$color-4: #204434b7;
+$color-5: rgba(245, 233, 127);
+$color-6: #0f1f1c;
+$color-7: #f6f6f6;
+$color-8: #ff7b4e;
+$color-9: #ff584e;
+$color-10: #c4c4c4;
+$color-11: linear-gradient(129.54deg, $color-8 15.57%, $color-9 95.03%);
+$color-12: rgba(255, 255, 255, 0.25);
+$color-13: linear-gradient(132.05deg, #428e5f -17.38%, #112120 78.4%), #204434;
+$color-14: linear-gradient(0deg, #ffffff, #ffffff), #c4c4c4;
+$color-15: linear-gradient(209deg, #428e5f -17.38%, #112120 78.4%), #204434;
+
+@mixin container-width {
+  max-width: 1270px;
+}
+
+@mixin container-padding {
+  padding: 0 15px;
+}
+
+// Position
+@mixin position {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+// Fonts
+@mixin font {
+  font-family: "Inter", sans-serif;
+
+  color: $color-2;
+}
+
+// Btn-style
+@mixin btn {
+  display: inline-block;
+  padding: 25px 45px;
+  background: $color-11;
+  border-radius: 27px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.25s;
+  color: $color-3;
+
+  @include _850 {
+    padding: 20px 30px;
+    border-radius: 30px;
+    font-size: 18px;
+  }
+
+  &:hover {
+    color: $color-5;
+    transition: color 0.2s ease-in;
+  }
+
+  &:active {
+    position: relative;
+    top: 1px;
+  }
+}
+
+// Btn-style Slider
+@mixin btn-slider {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-left: 26px;
+  justify-content: flex-start;
+  z-index: 1;
+  transition: fill 0.2s ease-in;
+
+  @include _400 {
+    padding-left: 16px;
+  }
+}
+
+@mixin hoverSlider {
+  &:hover svg {
+    fill: $color-5;
+  }
+}
+
+// Adaptive
+@mixin _1749 {
+  @media (max-width: 1749px) {
+    @content;
+  }
+}
+@mixin _1200 {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+@mixin _1400 {
+  @media (max-width: 1400px) {
+    @content;
+  }
+}
+@mixin _1170 {
+  @media (max-width: 1170px) {
+    @content;
+  }
+}
+@mixin _1120 {
+  @media (max-width: 1120px) {
+    @content;
+  }
+}
+@mixin _1060 {
+  @media (max-width: 1060px) {
+    @content;
+  }
+}
+@mixin _1000 {
+  @media (max-width: 1000px) {
+    @content;
+  }
+}
+@mixin _979 {
+  @media (max-width: 979px) {
+    @content;
+  }
+}
+@mixin _850 {
+  @media (max-width: 850px) {
+    @content;
+  }
+}
+@mixin _768 {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+@mixin _700 {
+  @media (max-width: 700px) {
+    @content;
+  }
+}
+@mixin _600 {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+@mixin _480 {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+@mixin _400 {
+  @media (max-width: 400px) {
+    @content;
+  }
+}
+@mixin _350 {
+  @media (max-width: 350px) {
+    @content;
+  }
+}
