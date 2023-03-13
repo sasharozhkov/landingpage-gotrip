@@ -1,0 +1,33 @@
+.footer {
+  padding: 50px 0;
+
+  @include _850 {
+    padding: 20px 0;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    // Logo
+    .header__logo {
+      a {
+        font-weight: 700;
+        font-size: 20px;
+        color: $color-8;
+        transition: color 0.2s ease-in;
+
+        &:hover {
+          color: $color-5;
+        }
+      }
+    }
+  }
+
+  &__alexrozhkov {
+    svg {
+      fill: $color-8;
+    }
+  }
+}

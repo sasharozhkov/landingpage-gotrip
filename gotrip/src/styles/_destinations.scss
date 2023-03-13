@@ -1,0 +1,130 @@
+.destinations {
+  overflow-x: hidden;
+  padding: 96px 0 100px;
+
+  @include _850 {
+    padding: 0;
+  }
+
+  &__row {
+    display: flex;
+    column-gap: 50px;
+
+    @include _850 {
+      flex-direction: column;
+    }
+  }
+
+  &__content {
+    max-width: 365px;
+    color: $color-6;
+
+    .btn {
+      @include btn;
+      margin-top: 60px;
+
+      @include _850 {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  &__text {
+    margin-top: 15px;
+    font-size: 25px;
+    opacity: 0.5;
+
+    @include _850 {
+      font-size: 18px;
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 55px;
+
+    @include _850 {
+      font-size: 35px;
+    }
+
+    span {
+      font-size: 30px;
+
+      @include _850 {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__slider {
+    flex-shrink: 0;
+    width: 1110px;
+
+    @include _1200 {
+      width: 900px;
+    }
+
+    @include _850 {
+      width: 100%;
+    }
+
+    @include _850 {
+      margin-top: 30px;
+    }
+
+    .slider {
+      position: relative;
+
+      .slider__item {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 35px;
+        transition: 0.3s ease-in;
+
+        @include _850 {
+          border-radius: 30px;
+        }
+      }
+
+      &__btn {
+        display: block;
+        width: 68px;
+        height: 68px;
+        background: $color-11;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+
+        @include _400 {
+          width: 48px;
+          height: 48px;
+        }
+
+        svg {
+          fill: $color-2;
+        }
+      }
+
+      &__btn--prev {
+        @include hoverSlider;
+        @include btn-slider;
+        left: -27px;
+
+        @include _850 {
+          left: 0px;
+        }
+      }
+
+      &__btn--next {
+        @include hoverSlider;
+        @include btn-slider;
+        right: -27px;
+
+        @include _850 {
+          right: 0px;
+        }
+      }
+    }
+  }
+}

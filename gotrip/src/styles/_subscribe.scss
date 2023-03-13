@@ -1,0 +1,60 @@
+.subscribe {
+  padding: 35px 0 50px;
+
+  @include _850 {
+    padding: 0px 0px 30px;
+  }
+
+  &__content {
+    @include position;
+    text-align: center;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 55px;
+    max-width: 494px;
+    color: $color-6;
+    margin-bottom: 60px;
+
+    @include _850 {
+      font-size: 35px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &-form {
+    display: flex;
+    column-gap: 20px;
+    padding: 12px 15px 12px 46px;
+    background: $color-14;
+    border-radius: 35px;
+
+    @include _850 {
+      flex-direction: column;
+      padding: 10px;
+      border-radius: 30px;
+      row-gap: 10px;
+    }
+  }
+
+  &-form__input {
+    font-size: 24px;
+    color: $color-6;
+    opacity: 0.5;
+
+    @include _850 {
+      text-align: center;
+      padding: 15px 0;
+      background-color: rgb(209, 209, 209);
+      border-radius: 30px;
+      font-size: 18px;
+    }
+  }
+
+  &-form__btn {
+    @include btn;
+    padding: 34px 86px;
+    font-size: 25px;
+  }
+}
